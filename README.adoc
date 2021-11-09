@@ -357,5 +357,10 @@ C:\Users\kuboaki\rubybook>asciidoctor README.adoc
 
 生成されたHTMLファイル（ `README.html` ）をブラウザで表示して、作成した図を反映した文書が生成できていることを確認します。
 
+[IMPORTANT]
+--
+この演習では、この段階でコミットできているかどうかも評価します。
+HTMLファイルを生成したときのコミットを省かないよう、注意してください。
+--
 
 
