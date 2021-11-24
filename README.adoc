@@ -39,7 +39,7 @@
 この演習では、分析・設計にUMLを使います。
 モデル図は、astah* Professional を使って作成します。
 
-* `models` ディレクトリに `load_cleaner.asta` と `ev3rt.asta` があることを確認します。
+* `models` ディレクトリに `road_cleaner.asta` と `ev3rt.asta` があることを確認します。
 * 作成した図をファイルに書き出すときは、 `images` ディレクトリに保存します。
 * プログラムは、`codes` ディレクトリに保存します。
 
@@ -64,11 +64,11 @@
 「 <<hearing_desc01>> 」を参照して、ロードクリーナーのユースケース図、ユースケース記述を作成しなさい。
 
 .要求分析のユースケース図の作成
-. `models` ディレクトリの `load_cleaner.asta` を開く。
+. `models` ディレクトリの `road_cleaner.asta` を開く。
 . 「01_要求分析」モデルの中に仮で作成された「要求分析のユースケース図」を編集しなさい。
 ** アクターやユースケースのサンプルが書いてあるので、それを修正して使うか、削除して新しいものを追加しなさい。
 ** ユースケース記述は、ユースケースに紐付けたノートを使って作成しなさい。
-. ユースケース図（ノートに書くユースケース記述も）作成できたら、`load_cleaner.asta` を保存しなさい。
+. ユースケース図（ノートに書くユースケース記述も）作成できたら、`road_cleaner.asta` を保存しなさい。
 
 .ユースケース図の保存と作業のコミット
 . 作成したユースケース図をSVG画像として保存しなさい。
@@ -95,17 +95,17 @@ image::use_case.svg[ロードクリーナーのユースケース図, {tree-quar
 
 [[hearing_desc02]]
 .ロードクリーナーに関する機器や環境等の検討結果
-. ロードクリーナーには、Mindstorms EV3のキットで製作した <<load_cleaner>> のような自律走行ロボットを採用する。
+. ロードクリーナーには、Mindstorms EV3のキットで製作した <<road_cleaner>> のような自律走行ロボットを採用する。
 . ロードクリーナーの開発には「EV3RT」を採用する。
 ** EV3RTは、Mindstorms EV3用のRTOSを使った開発環境。RTOSカーネルにTOPPERS/HRP3を採用し、これにMindstorms EV3用のセンサーやモーター等のライブラリが追加されている。
 . このシステムによって除去するのは、 <<corn_object>> のような大きさ・形状の障害物。
-. このシステムでは、 <<load_map>> のようなコースを巡回する。
+. このシステムでは、 <<road_map>> のようなコースを巡回する。
 . チーフの開始指示は、ロードクリーナーのEV3本体の「右ボタン」を押すことする。
 . チーフの停止指示は、ロードクリーナーのEV3本体の「左ボタン」を押すことする。
 
-[[load_cleaner]]
+[[road_cleaner]]
 .ロードクリーナーに採用が決まった自律走行ロボット
-image::load_cleaner.jpg[自律走行ロボット, {three-quarters-width}]
+image::road_cleaner.jpg[自律走行ロボット, {three-quarters-width}]
 
 
 [[corn_object]]
@@ -113,9 +113,9 @@ image::load_cleaner.jpg[自律走行ロボット, {three-quarters-width}]
 image::corn_object.jpg[障害物, {one-quarters-width}]
 
 
-[[load_map]]
+[[road_map]]
 .ロードクリーナーが巡回するコース
-image::load_map.png[障害物, {full-width}]
+image::road_map.png[障害物, {full-width}]
 
 
 === 【演習】システム分析の方式設計書を作成する
@@ -128,11 +128,11 @@ image::load_map.png[障害物, {full-width}]
 --
 
 .システム分析の方式設計書の作成
-. `models` ディレクトリの `load_cleaner.asta` を開く。
+. `models` ディレクトリの `road_cleaner.asta` を開く。
 . 「02_システム分析」モデルの中に仮で作成された「方式設計書」を編集しなさい。
 ** 使用する機器や環境等についてノートに記載しなさい。
 ** 他に記載することがあれば、追記します。
-. 方式設計書が作成できたら、`load_cleaner.asta` を保存しなさい。
+. 方式設計書が作成できたら、`road_cleaner.asta` を保存しなさい。
 
 .方式設計書の保存と作業のコミット
 . 作成した方式設計書をSVG画像として保存しなさい。
@@ -298,7 +298,7 @@ video::A24WsSucrKw[youtube,width=640,height=360]
 . システム分析の記述「 <<hearing_desc02>> 」や「方式設計書」などを参考に、クラス図にクラスを追加しなさい。
 . 必要な関連を追加しなさい。
 . 一旦作成したら、システムの振舞いを担うクラスの内部設計のステートマシン図を作成しなさい。
-** 仮の設定として `app` パッケージの `load_cleaner` クラスの `run` メソッドが担当する操作としてステートマシン図を追加してあります。
+** 仮の設定として `app` パッケージの `road_cleaner` クラスの `run` メソッドが担当する操作としてステートマシン図を追加してあります。
 ** 他のクラスの振舞いにもステートマシン図が必要なら追加しなさい。
 . ステートマシン図を作成する際に、必要となるモノや働きが不足するようなら、クラス図に戻って追加、修正しなさい。
 . クラス図に追加、修正が済んだら、それを使ってステートマシン図を更新しなさい。
@@ -307,7 +307,7 @@ video::A24WsSucrKw[youtube,width=640,height=360]
 .クラス図とステートマシン図の保存と作業のコミット
 . 作成した内部設計のクラス図とステートマシン図をSVG画像として保存しなさい。
 ** クラス図は、 `images` ディレクトリに `detail_design_class.svg` という名前で保存します（すでに仮の画像がおいてあるので、置き換えます）。
-** ステートマシン図は、 `images` ディレクトリに `detail_design_load_cleaner_run_stm.svg` という名前で保存します（すでに仮の画像がおいてあるので、置き換えます）。
+** ステートマシン図は、 `images` ディレクトリに `detail_design_road_cleaner_run_stm.svg` という名前で保存します（すでに仮の画像がおいてあるので、置き換えます）。
 . 他のクラスにもステートマシン図を作成したなら、同様にSVG画像として保存しなさい。
 ** 追加した図は、 `git add` コマンドを使ってリポジトリの追跡対象に追加しなさい。f
 . ここまでの作業をコミットします。
@@ -327,9 +327,9 @@ image::detail_design_class.svg[ロードクリーナーの内部設計のクラ�
 ｀
 
 
-[[detail_design_load_cleaner_run_stm_svg]]
+[[detail_design_road_cleaner_run_stm_svg]]
 .【内部設計書】ロードクリーナーの内部設計のステートマシン図
-image::detail_design_load_cleaner_run_stm.svg[ロードクリーナーの内部設計のステートマシン図, {full-width}]
+image::detail_design_road_cleaner_run_stm.svg[ロードクリーナーの内部設計のステートマシン図, {full-width}]
 
 
 == 設計書の文書化
